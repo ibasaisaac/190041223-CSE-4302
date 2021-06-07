@@ -9,9 +9,12 @@ private:
     string type;
     int amount;
 public:
-    BankAccount():amount(0)
+    BankAccount() //:name(""),account_number(0),type(""),amount(0)
     {
-
+        name="";
+        account_number=0;
+        type="";
+        amount=0;
     }
     void customerDetails(string cname, int ac)
     {
