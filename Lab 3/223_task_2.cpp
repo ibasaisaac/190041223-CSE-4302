@@ -46,5 +46,5 @@ int main()
     r1.print();
     cout<<r1.convert()<<endl;
     r1.invert();
-    r1.print();
+    cout<<r1.convert()<<endl;
 }
