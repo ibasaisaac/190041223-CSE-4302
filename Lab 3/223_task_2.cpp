@@ -12,12 +12,12 @@ public:
     }
     void assign(int numerator, int denominator)
     {
+        p=numerator;
+        q=denominator;
         if(p==0)
         {
             cout<<"error"<<endl;
         }
-        p=numerator;
-        q=denominator;
     }
     double convert()
     {
