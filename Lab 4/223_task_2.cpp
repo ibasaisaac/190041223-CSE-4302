@@ -20,7 +20,7 @@ private:
         return Fuel;
     }
 public:
-    int Fuel;
+    //int Fuel;
     FlightInfo()
     {
         FlightNumber=0;
@@ -36,20 +36,33 @@ public:
         cin>>Destination;
         cout<<"Distance: ";
         cin>>Distance;
-        Fuel=CalFuel();
+        cout<<"Max fuel capacity: ";
+        cin>>MaxFuelCapacity;
+    }
+    void setDistance(int d)
+    {
+        Distance=d;
     }
     void ShowInfo()
     {
+        int Fuel=CalFuel();
         cout<<"Flight Number: "<<FlightNumber<<endl;
         cout<<"Destination: "<<Destination<<endl;
         cout<<"Distance: "<<Distance<<endl;
-        cout<<"Max fuel capacity: "<<Fuel<<endl;
+        cout<<"Max fuel capacity: "<<MaxFuelCapacity<<endl;
+        if(MaxFuelCapacity<Fuel)
+            cout<<"Not sufficient Fuel Capacity for this flight"<<endl;
+        else
+            cout<<"Fuel Capacity is fit for this flight"<<endl;
+        //cout<<"Max fuel capacity: "<<Fuel<<endl;
     }
 };
 
 int main()
 {
     FlightInfo f;
+
     f.FeedInfo();
+    f.setDistance(3000);
     f.ShowInfo();
 }

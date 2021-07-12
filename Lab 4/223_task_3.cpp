@@ -6,11 +6,9 @@ class Rectangle
 private:
     int length,width;
 public:
-    Rectangle(int l, int w)
+    Rectangle(int l=1, int w=1, int op=0)
     {
-        cin>>l;
         length=l;
-        cin>>w;
         width=w;
     }
     Rectangle():length(1),width(1)
@@ -59,7 +57,7 @@ public:
 
 int main()
 {
-    Rectangle r1;
+    Rectangle r1();
     int x,y;
     cout<<"Length: "<<r1.getLength()<<endl;
     cout<<"Width: "<<r1.getWidth()<<endl;
