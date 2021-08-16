@@ -51,7 +51,7 @@ public:
     void getData()
     {
         Furniture::getData();
-        cout<<"Enter bed size= ";
+        cout<<"Enter bed size (Single/SemiDouble/Double)= ";
         cin>>BedSize;
     }
     void putData()
@@ -77,7 +77,7 @@ public:
     void getData()
     {
         Furniture::getData();
-        cout<<"Enter seat number= ";
+        cout<<"Enter seat number(One/Two/Three/Four/Five)= ";
         cin>>SeatNumber;
     }
     void putData()
@@ -103,7 +103,7 @@ public:
     void getData()
     {
         Furniture::getData();
-        cout<<"Enter chair count= ";
+        cout<<"Enter chair count(Two/Four/Six)= ";
         cin>>ChairCount;
     }
     void putData()
@@ -188,5 +188,6 @@ int main()
     for(int i=0;i<n;i++)
     {
         delete furptr[i];
+        //cout<<"d"<<endl;
     }
 }
