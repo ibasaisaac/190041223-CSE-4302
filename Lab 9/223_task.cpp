@@ -3,7 +3,7 @@ using namespace std;
 
 class Furniture
 {
-protected:
+private:
     int regPrice,discPrice;
     string material;
     string productName;

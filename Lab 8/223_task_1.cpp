@@ -21,7 +21,7 @@ protected:
         return Shape::whoAmI() + ("I am a two-dimensional shape\n");
     }
 public:
-    //int op=9;
+    int op=9;
     void area()
     {
         double ar=0;
@@ -59,9 +59,10 @@ class Triangle: public TwoDimensionalShape
 private:
     double a,b,c;
 public:
+    //op=6; not ok
     Triangle():a(0),b(0),c(0)
     {
-
+        //op=6;
     }
     Triangle(double ta, double tb, double tc):a(ta),b(tb),c(tc)
     {
@@ -70,6 +71,7 @@ public:
     string whoAmI() //overridden function
     {               //calling the whoAmI() function of base class and adding the returned string
         return TwoDimensionalShape::whoAmI() + string("I am a triangle\n");
+        //op=6; ok here in overridden function
     }
     void area() //overridden function
     {

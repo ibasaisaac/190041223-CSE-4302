@@ -12,7 +12,7 @@ class track; //for forward references
 class horse
 {
 private:
-    const track* ptrTrack; //pointer to track
+    const track* ptrTrack; //pointer to track, content of pointer does not change
     const int horse_number; //this horse’s number
     float finish_time; //this horse’s finish time
     float distance_run; //distance run so far
@@ -71,7 +71,7 @@ void horse::display_horse(float elapsed_time) //for each horse
     }
 } //end display_horse()
 //---------------------------------------------------------------
-track::track(float lenT, int nH) : //track constructor
+track::track(float lenT, int nH) : ///track constructor
     track_length(lenT), total_horses(nH),
     horse_count(0), elapsed_time(0.0)
 {
@@ -79,7 +79,7 @@ track::track(float lenT, int nH) : //track constructor
     total_horses = //not more than 7 horses
         (total_horses > maxHorses) ? maxHorses : total_horses;
     for(int j=0; j<total_horses; j++) //make each horse object
-        hArray[j] = new horse(horse_count++, this);
+        hArray[j] = new horse(horse_count++, this); ///array of pointers to horse object created
     time_t aTime; //initialize random numbers
     srand( static_cast<unsigned>(time(&aTime)) );
     display_track();

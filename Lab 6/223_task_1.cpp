@@ -50,11 +50,11 @@ Counter Counter::operator++()
 {
     return Counter(++count,steps);
 }
-void Counter::operator+=(const Counter& c)
+void Counter::operator+=(const Counter &c)
 {
     count+=c.count;
 }
-Counter operator+ (int v, Counter r) //4+c2
+Counter operator+(int v, Counter r)
 {
     Counter temp;
     temp.count=v+r.count;
